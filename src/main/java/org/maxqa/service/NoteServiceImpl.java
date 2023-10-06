@@ -1,7 +1,7 @@
 package org.maxqa.service;
 
 import lombok.extern.java.Log;
-import org.maxqa.dao.Commands;
+import org.maxqa.commands.Commands;
 import org.maxqa.dao.NoteDaoImpl;
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package org.maxqa.dao;
+package org.maxqa.commands;
 
 import lombok.Getter;
 

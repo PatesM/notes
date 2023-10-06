@@ -12,21 +12,17 @@ import java.util.Objects;
 @Getter
 @Setter
 public class Note {
+    private static int initialId = 0;
+
+    @Getter
+    @Setter
+    public static List<Note> notes = new ArrayList<>();
+
     private int id;
 
     private String note;
 
     private List<String> labels;
-
-    private static int initialId = 0;
-
-    public static void resetId() {
-        initialId = 0;
-    }
-
-    @Getter
-    @Setter
-    public static List<Note> notes = new ArrayList<>();
 
     public Note(String note, String labels) {
         this.note = note;
@@ -35,6 +31,10 @@ public class Note {
 
     public void generateId() {
         this.id = initialId += 1;
+    }
+
+    public static void resetId() {
+        initialId = 0;
     }
 
     public static void addNoteToList(Note note) {
